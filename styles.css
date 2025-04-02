@@ -68,3 +68,24 @@ button:hover {
     box-sizing: border-box;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #003366;
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px; /* Adjust size as needed */
+    width: auto;
+    margin-right: 15px;
+}
+
+
