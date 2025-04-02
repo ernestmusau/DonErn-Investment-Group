@@ -1,25 +1,49 @@
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
     background-color: #f4f4f4;
-    
 }
 
+/* Header styling */
 header {
     background: #003366;
     color: white;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
+/* Logo container aligned to the left */
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.logo {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Navigation menu */
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -29,14 +53,21 @@ nav ul li a {
     font-size: 18px;
 }
 
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section styling */
 section {
     padding: 20px;
     background: white;
     margin: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
+/* Form styling */
 form input, textarea {
     display: block;
     margin: 10px auto;
@@ -61,31 +92,12 @@ button:hover {
     background: #0056b3;
 }
 
-/* Reset and Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+/* Footer styling */
+footer {
     background: #003366;
     color: white;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
 }
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    height: 50px; /* Adjust size as needed */
-    width: auto;
-    margin-right: 15px;
-}
-
 
