@@ -4,6 +4,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* Header styling */
@@ -11,10 +13,54 @@ header {
     background: #003366;
     color: white;
     padding: 20px;
+    width: 100%;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* Header title */
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    width: 100%;
     text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Navigation menu */
+nav {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: auto;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 /* Logo container aligned to the left */
@@ -27,44 +73,22 @@ header {
 }
 
 .logo {
-    height: 180px;
-    width: 180px;
+    height: 120px;
+    width: 120px;
     border-radius: 50%;
     object-fit: cover;
-}
-
-/* Navigation menu */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
 }
 
 /* Section styling */
 section {
     padding: 20px;
     background: white;
-    margin: 20px;
+    margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 80%;
+    max-width: 1200px;
 }
 
 /* Form styling */
@@ -99,5 +123,50 @@ footer {
     padding: 15px;
     margin-top: 20px;
     text-align: center;
+    width: 100%;
 }
 
+/* Responsive styles for mobile devices */
+@media screen and (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        height: 80px;
+        width: 80px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    section {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    /* Reduce font size and margins for mobile devices */
+    header h1 {
+        font-size: 1.8em; /* Adjusted size */
+        word-wrap: break-word; /* Allow text to wrap */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Adjusted font size */
+    }
+
+    footer {
+        font-size: 14px; /* Adjusted footer font size */
+    }
+}
